@@ -377,12 +377,20 @@
      /* Pink HTML Color Names  */
 
      --color-light-pink:#FFB6C1;
-     --color-hot-pink:#F08080;
-     --color-salmon:#FA8072;
-     --color-dark-salmon:#E9967A;
+     --color-hot-pink:#FF69B4;
+     --color-deep-pink:#FF1493;
+     --color-medium-violet-red:#C71585;
+     --color-pale-violet-red:#DB7093;
+
+
+     /* Orange HTML Color Names  */
+
      --color-light-salmon:#FFA07A;
-     --color-crimson:#DC143C;
-     --color-fire-brick:#B22222;
-     --color-dark-red:#8B0000;
+     --color-coral:#FF7F50;
+     --color-tomato:#FF6347;
+     --color-orange-red:#FF4500;
+     --color-dark-orange:#FF8C00;
+     
+     
 
 }
