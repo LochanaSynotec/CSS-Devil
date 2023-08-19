@@ -1,6 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    var cssAraay = {'h': 'height''px', 'bgc': 'background-color'};
+    //var cssAraay = {'h': 'height', 'bgc': 'background-color'};
+
+    var cssAraay = new Map([
+        ['h', ['height', 'px']],
+        ['bgc', ['background-color', '']],
+        ['mt', ['margin-top', 'px']],
+        ['round', ['border-radius', 'px']]
+    ]);
 
 
 
@@ -10,49 +17,41 @@ document.addEventListener('DOMContentLoaded', function() {
     var css_val;
     // Check if the element with data-devil exists
     if (element) {
-      // Retrieve the value of the data-devil attribute
-      var dataDevilValue = element.getAttribute('data-devil');
+        // Retrieve the value of the data-devil attribute
+        var dataDevilValue = element.getAttribute('data-devil');
 
-      spaceArray=dataDevilValue.split(" ");
-      console.log(spaceArray);
+        spaceArray = dataDevilValue.split(" ");
+        // console.log(spaceArray);
 
-      for (var i = 0; i < spaceArray.length; i++){
-         // console.log(spaceArray[i]);
-          myArray=spaceArray[i];
-          myArray = myArray.split("-");
+        for (var i = 0; i < spaceArray.length; i++) {
 
-        //   if (myArray[0]=='h') {
-        //     element.style.height = '100px';
-        //   } else {
-            
-        //   }
-        console.log(myArray[i]);
-        
+            myArray = spaceArray[i];
+            myArray = myArray.split("#");
 
+            console.log(myArray[0]);
 
-          if (myArray[i] in cssAraay) {
-            var valueOfA = cssAraay[myArray[i]];
-            element.style[valueOfA] = myArray[1];
-
-            console.log(element.style[valueOfA] = myArray[i]+'px'); // Output: 200
-          } else {
-            console.log("Key 'a' does not exist");
-          }
-    
+            for (var [id, values] of cssAraay) {
+               
+                if (id === myArray[0]) {
+                   
+                   // console.log('ID matched:', id);
+                    // Perform actions based on the matched ID
+                    // For example, you can access the associated values like this:
+                   // console.log('Associated values:', values);
+                    element.style[values[0]] = myArray[1] + values[1];
 
 
+                }
+            }
 
-
+           
 
         }
 
-      // Perform further actions with the value
-      console.log('data-devil value:', element);
+        // Perform further actions with the value
+       // console.log('data-devil value:', element);
     } else {
-      console.log('No element with data-devil="asas" found.');
+       // console.log('No element with data-devil="asas" found.');
     }
-  });
-  
+});
 
-
-  
