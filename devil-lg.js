@@ -1,13 +1,12 @@
 
 
     function checkDeviceSize() {
-               var elements = document.querySelectorAll('[data-devil]');
-              
+        const width = window.innerWidth;
+        if (width < 1200 && width > 992) {
+            var elements = document.querySelectorAll('[data-dlg]');
             if (elements.length > 0) {
                 for (var a = 0; a < elements.length; a++) {
                     //var cssAraay = {'h': 'height', 'bgc': 'background-color'};
-
-                 
 
                     // Get the HTML element with data-devil attribute and value 'asas'
                     var element = elements[a];
@@ -16,7 +15,7 @@
                     // Check if the element with data-devil exists
                     if (element) {
                         // Retrieve the value of the data-devil attribute
-                        var dataDevilValue = element.getAttribute('data-devil');
+                        var dataDevilValue = element.getAttribute('data-dlg');
                         element.style = null;
 
                         spaceArray = dataDevilValue.split(" ");
@@ -44,7 +43,7 @@
                 console.log('No elements with data-devil attribute found.');
             }
         }
-    
+    }
 
     checkDeviceSize();
     window.addEventListener('resize', checkDeviceSize);
