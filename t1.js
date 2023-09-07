@@ -1,7 +1,6 @@
 
 
     function checkDeviceSize() {
-        alert('dd');
             var elements = document.querySelectorAll('[data-devil]');
             if (elements.length > 0) {
                 for (var a = 0; a < elements.length; a++) {

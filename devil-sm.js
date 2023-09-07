@@ -23,7 +23,7 @@
                         for (var i = 0; i < spaceArray.length; i++) {
 
                             myArray = spaceArray[i];
-                            myArray = myArray.split("#");
+                            myArray = myArray.split(":");
 
                             console.log(myArray[0]);
 
